@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ARTreasureHunt", "Assembly-CSharp.csproj", "{ABCFA482-41C0-153E-8E5C-6C3695013166}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ARTreasureHunt", "Assembly-CSharp-Editor.csproj", "{ECB41179-4B55-B5D8-49AA-D3899BE6738F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ABCFA482-41C0-153E-8E5C-6C3695013166}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABCFA482-41C0-153E-8E5C-6C3695013166}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABCFA482-41C0-153E-8E5C-6C3695013166}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABCFA482-41C0-153E-8E5C-6C3695013166}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ECB41179-4B55-B5D8-49AA-D3899BE6738F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECB41179-4B55-B5D8-49AA-D3899BE6738F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECB41179-4B55-B5D8-49AA-D3899BE6738F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECB41179-4B55-B5D8-49AA-D3899BE6738F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal
