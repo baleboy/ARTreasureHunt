@@ -38,3 +38,6 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/UnityARKitPlugin/Examples/FaceTracking/FaceDirectionalLightEstimate.unity
     guid: 360fd35caee4f4e069485021a27c0b06
+  - enabled: 1
+    path: Assets/MyAssets/TreasureHuntScene.unity
+    guid: 93f7a5e9d3cc64bd29291d5c7942063b

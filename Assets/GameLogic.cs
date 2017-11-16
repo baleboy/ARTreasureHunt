@@ -15,6 +15,7 @@ namespace UnityEngine.XR.iOS {
 		// Use this for initialization
 		void Start () {
 			m_detector.SetScale(0.2f,5);
+			Screen.sleepTimeout = SleepTimeout.NeverSleep;
 		}
 
 		void OnEnable()
