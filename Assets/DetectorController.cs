@@ -21,6 +21,10 @@ public class DetectorController : MonoBehaviour {
 		m_max = max;
 	}
 
+	public void SetMaxScale(float max) {
+		m_max = max;
+	}
+
 	public void SetValue(float v) {
 		v = Mathf.Abs(v);
 		if (v > m_max) {

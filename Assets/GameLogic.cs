@@ -12,6 +12,7 @@ namespace UnityEngine.XR.iOS {
 		public GameObject m_MainMenuPanel;
 		public GameObject m_ScanningPanel;
 		public GameObject m_PlaceMarkerPanel;
+		public GameObject m_SettingsPanel;
 
 		public Text m_distanceText;
 		public Text m_debugText;
@@ -58,6 +59,29 @@ namespace UnityEngine.XR.iOS {
 				m_state = State.Scanning;
 			}
 			m_MainMenuPanel.SetActive(false);
+		}
+
+		public void OnSettingsButton() {
+			m_MainMenuPanel.SetActive(false);
+			m_SettingsPanel.SetActive(true);
+		}
+
+		public void SetGameAreaSize(int s) {
+			Debug.Log("Max scale option value = " + s.ToString());
+			float maxScale = 5.0f;
+			switch(s){
+				case 0:
+					maxScale = 5.0f;
+					break;
+				case 1:
+					maxScale = 15.0f;
+					break;
+				case 2:
+					maxScale = 50.0f;
+					break;
+			}
+			m_detector.SetMaxScale(maxScale);
+			Debug.Log("Max scale = " + maxScale.ToString());
 		}
 
 		// Update is called once per frame
