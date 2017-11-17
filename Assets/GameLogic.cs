@@ -13,6 +13,7 @@ namespace UnityEngine.XR.iOS {
 		public GameObject m_ScanningPanel;
 		public GameObject m_PlaceMarkerPanel;
 		public GameObject m_SettingsPanel;
+		public Dropdown m_AreaDropdown;
 
 		public Text m_distanceText;
 		public Text m_debugText;
@@ -22,9 +23,15 @@ namespace UnityEngine.XR.iOS {
 		private State m_state = State.Start;
 		private ARTrackingState m_tracking_state = ARTrackingState.ARTrackingStateNotAvailable;
 
+		const string GAME_AREA_MAX_PREF = "GameAreaSizeMax";
+
+		float[] m_maxScale = {5f, 15f, 50f};
+
 		// Use this for initialization
 		void Start () {
-			m_detector.SetScale(0.2f,5);
+			int scaleOption = PlayerPrefs.GetInt(GAME_AREA_MAX_PREF);
+			m_AreaDropdown.value = scaleOption;
+			m_detector.SetScale(0.2f, m_maxScale[scaleOption]);
 			Screen.sleepTimeout = SleepTimeout.NeverSleep;
 		}
 
@@ -68,20 +75,9 @@ namespace UnityEngine.XR.iOS {
 
 		public void SetGameAreaSize(int s) {
 			Debug.Log("Max scale option value = " + s.ToString());
-			float maxScale = 5.0f;
-			switch(s){
-				case 0:
-					maxScale = 5.0f;
-					break;
-				case 1:
-					maxScale = 15.0f;
-					break;
-				case 2:
-					maxScale = 50.0f;
-					break;
-			}
-			m_detector.SetMaxScale(maxScale);
-			Debug.Log("Max scale = " + maxScale.ToString());
+			m_detector.SetMaxScale(m_maxScale[s]);
+			PlayerPrefs.SetInt(GAME_AREA_MAX_PREF, s);
+			Debug.Log("Max scale = " + m_maxScale[s].ToString());
 		}
 
 		// Update is called once per frame

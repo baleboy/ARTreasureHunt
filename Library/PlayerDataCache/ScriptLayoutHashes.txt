@@ -49,7 +49,7 @@ c63db43c730fa2cbb8ca07de15898cb6 UnityEngine.UI.dll:UnityEngine.UI.Toggle
 f61c0793411f10cf5fbfa1473fef5ef2 UnityEngine.UI.dll:UnityEngine.UI.ToggleGroup
 86d36c43c53541d667100dc90b89cfba UnityEngine.UI.dll:UnityEngine.EventSystems.TouchInputModule
 1b8c02d0aa82fbf036a2b9b2d713eec3 UnityEngine.UI.dll:UnityEngine.UI.VerticalLayoutGroup
-820e9e393973a38a4b8b5435134e34ce Assembly-CSharp.dll:UnityEngine.XR.iOS.GameLogic
+4b48da9ca32bc1919ee4a25db771fd7e Assembly-CSharp.dll:UnityEngine.XR.iOS.GameLogic
 f8e1023e5cf37242261f5d0e232b4fe5 Assembly-CSharp.dll:UnityEngine.XR.iOS.UnityARHitTestExample
 820e591855ac19dd439d99ec06d3ef2c Assembly-CSharp.dll:.ColorLabel
 a35dc9cca2faebc5f5f1aeb9e8e47bbe UnityEngine.UI.dll:UnityEngine.UI.AspectRatioFitter

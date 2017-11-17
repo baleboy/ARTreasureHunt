@@ -1080,6 +1080,7 @@ MonoBehaviour:
   m_ScanningPanel: {fileID: 682976275}
   m_PlaceMarkerPanel: {fileID: 248574145}
   m_SettingsPanel: {fileID: 1167757563}
+  m_AreaDropdown: {fileID: 2030566621}
   m_distanceText: {fileID: 2140549363}
   m_debugText: {fileID: 1965482433}
 --- !u!1 &377253415
