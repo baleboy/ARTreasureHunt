@@ -33,28 +33,12 @@ namespace UnityEngine.XR.iOS {
 			m_AreaDropdown.value = scaleOption;
 			m_detector.SetScale(0.2f, m_maxScale[scaleOption]);
 			Screen.sleepTimeout = SleepTimeout.NeverSleep;
+			UnityARSessionNativeInterface.ARSessionTrackingChangedEvent += TrackingChanged;
 		}
-
-		void OnEnable()
-    {
-        UnityARSessionNativeInterface.ARSessionTrackingChangedEvent += TrackingChanged;
-    }
 
 		void TrackingChanged(UnityARCamera camera) {
 			Debug.Log("Tracking changed");
 			m_tracking_state = camera.trackingState;
-
-			if (camera.trackingState == ARTrackingState.ARTrackingStateNormal) {
-				m_debugText.text = "State: Normal (" + camera.trackingState.ToString() + ")";
-				if (m_state == State.Scanning) {
-					m_ScanningPanel.SetActive(false);
-					m_PlaceMarkerPanel.SetActive(true);
-				}
-			}
-			if (camera.trackingState == ARTrackingState.ARTrackingStateLimited) {
-				m_debugText.text = "State: Limited (" + camera.trackingState.ToString() + ")";
-			}
-			// m_debugText.text = camera.trackingState.ToString() + ", " + camera.trackingReason.ToString();
 		}
 
 		public void OnStartButton() {

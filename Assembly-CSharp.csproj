@@ -56,6 +56,7 @@
      <Compile Include="Assets\Scripts\DistanceTracker.cs" />
      <Compile Include="Assets\Scripts\GameLogic.cs" />
      <Compile Include="Assets\Scripts\MarkerPanelController.cs" />
+     <Compile Include="Assets\Scripts\ScanningPanelController.cs" />
      <Compile Include="Assets\Scripts\UpdateUI.cs" />
      <Compile Include="Assets\UnityARKitPlugin\ARKitRemote\ARKitRemoteConnection.cs" />
      <Compile Include="Assets\UnityARKitPlugin\ARKitRemote\ConnectionMessageIds.cs" />
