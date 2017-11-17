@@ -51,11 +51,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\DetectorController.cs" />
-     <Compile Include="Assets\DialController.cs" />
-     <Compile Include="Assets\DistanceTracker.cs" />
-     <Compile Include="Assets\GameLogic.cs" />
-     <Compile Include="Assets\MarkerPanelController.cs" />
+     <Compile Include="Assets\Scripts\DetectorController.cs" />
+     <Compile Include="Assets\Scripts\DialController.cs" />
+     <Compile Include="Assets\Scripts\DistanceTracker.cs" />
+     <Compile Include="Assets\Scripts\GameLogic.cs" />
+     <Compile Include="Assets\Scripts\MarkerPanelController.cs" />
+     <Compile Include="Assets\Scripts\UpdateUI.cs" />
      <Compile Include="Assets\UnityARKitPlugin\ARKitRemote\ARKitRemoteConnection.cs" />
      <Compile Include="Assets\UnityARKitPlugin\ARKitRemote\ConnectionMessageIds.cs" />
      <Compile Include="Assets\UnityARKitPlugin\ARKitRemote\ConnectToEditor.cs" />
@@ -125,7 +126,6 @@
      <Compile Include="Assets\UnityARKitPlugin\Plugins\iOS\UnityARKit\NativeInterface\ARTrackingStateReason.cs" />
      <Compile Include="Assets\UnityARKitPlugin\Plugins\iOS\UnityARKit\NativeInterface\ARUserAnchor.cs" />
      <Compile Include="Assets\UnityARKitPlugin\Plugins\iOS\UnityARKit\NativeInterface\UnityARSessionNativeInterface.cs" />
-     <Compile Include="Assets\UpdateUI.cs" />
      <None Include="Assets\UnityARKitPlugin\Examples\Common\Shaders\MobileOcclusion.shader" />
      <None Include="Assets\UnityARKitPlugin\ARKitRemote\ARKITREMOTE.txt" />
      <None Include="Assets\UnityARKitPlugin\Plugins\iOS\UnityARKit\Shaders\YUVShaderLinear.shader" />
