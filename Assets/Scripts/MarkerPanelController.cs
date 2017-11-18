@@ -16,7 +16,7 @@ namespace UnityEngine.XR.iOS {
 		void OnDisable() {
 			Screen.sleepTimeout = SleepTimeout.SystemSetting;
 		}
-		
+
 		bool PlaceObjectOnHitPoint (GameObject obj, ARPoint point, ARHitTestResultType resultTypes)
 		{
 			List<ARHitTestResult> hitResults = UnityARSessionNativeInterface.GetARSessionNativeInterface ().HitTest (point, resultTypes);

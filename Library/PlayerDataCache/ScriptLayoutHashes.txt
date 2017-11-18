@@ -174,5 +174,4 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.VR.WSA.Spa
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.UnityARCameraNearFar
 d39c26c20df3f31d7246e81da8ebd061 Assembly-CSharp.dll:UnityEngine.XR.iOS.MarkerPanelController
 17ed5249ac17051c83dbcf29829597de Assembly-CSharp.dll:UnityEngine.XR.iOS.ScanningPanelController
-ea6a31026dfb9b5857168e811c32b193 Assembly-CSharp.dll:UnityEngine.XR.iOS.MainMenuController
 e2cd4166b8d87b41f2cc3f1aa96225f9 Assembly-CSharp.dll:.SettingsPanelController

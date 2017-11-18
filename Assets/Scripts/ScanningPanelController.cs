@@ -10,41 +10,27 @@ namespace UnityEngine.XR.iOS {
 		public GameObject m_ScanningPanel;
 		public GameObject m_MarkerPanel;
 		public Text m_debugText;
-
-		private ARTrackingState m_tracking_state = ARTrackingState.ARTrackingStateNotAvailable;
-
-		// Use this for initialization
-		void Start () {
-        UnityARSessionNativeInterface.ARSessionTrackingChangedEvent += TrackingChanged;
-		}
+		const int MIN_FEATURE_POINTS = 20;
 
 		void OnEnable() {
 			Debug.Log("Scanning Panel enabled");
 			Screen.sleepTimeout = SleepTimeout.NeverSleep;
+			UnityARSessionNativeInterface.ARFrameUpdatedEvent += ARFrameUpdate;
 		}
 
 		void OnDisable() {
 			Debug.Log("Scanning Panel disabled");
 			Screen.sleepTimeout = SleepTimeout.SystemSetting;
+			UnityARSessionNativeInterface.ARFrameUpdatedEvent -= ARFrameUpdate;
 		}
 
-		void TrackingChanged(UnityARCamera camera) {
-			Debug.Log("Tracking changed");
-			m_tracking_state = camera.trackingState;
-
-			if (camera.trackingState == ARTrackingState.ARTrackingStateNormal) {
-				m_debugText.text = "State: Normal (" + camera.trackingState.ToString() + ")";
+		void ARFrameUpdate(UnityARCamera camera){
+			Debug.Log("Number of feature points: " + camera.pointCloudData.Length);
+			if (camera.pointCloudData.Length >= MIN_FEATURE_POINTS) {
+				m_debugText.text = "Got enough feature points";
 				m_ScanningPanel.SetActive(false);
 				m_MarkerPanel.SetActive(true);
 			}
-			if (camera.trackingState == ARTrackingState.ARTrackingStateLimited) {
-				m_debugText.text = "State: Limited (" + camera.trackingState.ToString() + ")";
-			}
-		}
-
-		// Update is called once per frame
-		void Update () {
-
 		}
 	}
 }
