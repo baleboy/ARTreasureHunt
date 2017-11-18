@@ -42,6 +42,14 @@ public class DetectorController : MonoBehaviour {
 		m_minBeepInterval = m_player.clip.length;
 	}
 
+	void OnEnable() {
+		Screen.sleepTimeout = SleepTimeout.NeverSleep;
+	}
+
+	void OnDisable() {
+		Screen.sleepTimeout = SleepTimeout.SystemSetting;
+	}
+	
 	// Update is called once per frame
 	void Update () {
 		if (gameObject.activeInHierarchy) {

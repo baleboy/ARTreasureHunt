@@ -9,6 +9,14 @@ namespace UnityEngine.XR.iOS {
 		private bool m_marker_placed = false;
 		public GameObject m_marker;
 
+		void OnEnable() {
+			Screen.sleepTimeout = SleepTimeout.NeverSleep;
+		}
+
+		void OnDisable() {
+			Screen.sleepTimeout = SleepTimeout.SystemSetting;
+		}
+		
 		bool PlaceObjectOnHitPoint (GameObject obj, ARPoint point, ARHitTestResultType resultTypes)
 		{
 			List<ARHitTestResult> hitResults = UnityARSessionNativeInterface.GetARSessionNativeInterface ().HitTest (point, resultTypes);

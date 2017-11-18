@@ -18,6 +18,16 @@ namespace UnityEngine.XR.iOS {
         UnityARSessionNativeInterface.ARSessionTrackingChangedEvent += TrackingChanged;
 		}
 
+		void OnEnable() {
+			Debug.Log("Scanning Panel enabled");
+			Screen.sleepTimeout = SleepTimeout.NeverSleep;
+		}
+
+		void OnDisable() {
+			Debug.Log("Scanning Panel disabled");
+			Screen.sleepTimeout = SleepTimeout.SystemSetting;
+		}
+
 		void TrackingChanged(UnityARCamera camera) {
 			Debug.Log("Tracking changed");
 			m_tracking_state = camera.trackingState;

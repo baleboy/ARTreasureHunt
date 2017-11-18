@@ -23,16 +23,6 @@ namespace UnityEngine.XR.iOS {
 		private State m_state = State.Start;
 		private ARTrackingState m_tracking_state = ARTrackingState.ARTrackingStateNotAvailable;
 
-
-
-
-		void Start () {
-
-			Screen.sleepTimeout = SleepTimeout.NeverSleep;
-		}
-
-
-
 		// Update is called once per frame
 		void Update () {
 			float distance = Vector3.Distance(m_marker.transform.position, m_camera.transform.position);
