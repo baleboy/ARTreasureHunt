@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -6,6 +6,10 @@ using UnityEngine.UI;
 public class DetectorController : MonoBehaviour {
 
 	public DialController m_dial;
+	public GameObject m_camera;
+	public GameObject m_marker;
+	public Text m_distanceText;
+
 	float m_min = 0.4f;
 	float m_max = 5;
 	float m_intensity = 0.5f;
@@ -49,15 +53,19 @@ public class DetectorController : MonoBehaviour {
 	void OnDisable() {
 		Screen.sleepTimeout = SleepTimeout.SystemSetting;
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
-		if (gameObject.activeInHierarchy) {
-			m_elapsedTime += Time.deltaTime;
-			if (m_elapsedTime >= m_beepInterval) {
-					m_player.Play();
-					m_elapsedTime = 0;
-			}
+
+		float distance = Vector3.Distance(m_marker.transform.position, m_camera.transform.position);
+		SetValue(distance);
+		m_distanceText.text = distance.ToString("N");
+
+		m_elapsedTime += Time.deltaTime;
+		if (m_elapsedTime >= m_beepInterval) {
+			m_player.Play();
+			m_elapsedTime = 0;
 		}
+
 	}
 }
