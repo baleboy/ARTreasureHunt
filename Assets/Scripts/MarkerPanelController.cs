@@ -2,15 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 namespace UnityEngine.XR.iOS {
 	public class MarkerPanelController : MonoBehaviour {
 
 		private bool m_marker_placed = false;
 		public GameObject m_marker;
+		public Button m_startButton;
 
 		void OnEnable() {
 			Screen.sleepTimeout = SleepTimeout.NeverSleep;
+			m_startButton.interactable = false;
+			m_marker.SetActive(false);
 		}
 
 		void OnDisable() {
@@ -21,6 +25,10 @@ namespace UnityEngine.XR.iOS {
 		{
 			List<ARHitTestResult> hitResults = UnityARSessionNativeInterface.GetARSessionNativeInterface ().HitTest (point, resultTypes);
 			if (hitResults.Count > 0) {
+				if (!m_marker.activeSelf) {
+					m_marker.SetActive(true);
+					m_startButton.interactable = true;
+				}
 				foreach (var hitResult in hitResults) {
 					Debug.Log ("Got hit!");
 					obj.transform.position = UnityARMatrixOps.GetPosition (hitResult.worldTransform);

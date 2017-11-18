@@ -1189,6 +1189,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_marker: {fileID: 1069078995}
+  m_startButton: {fileID: 849023831}
 --- !u!1 &377253415
 GameObject:
   m_ObjectHideFlags: 0
@@ -2196,7 +2197,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0.0000029722, y: 311}
+  m_AnchoredPosition: {x: -1, y: 245}
   m_SizeDelta: {x: 263, y: 70.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &849023831
@@ -3302,8 +3303,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -1, y: -47}
-  m_SizeDelta: {x: 800, y: 100}
+  m_AnchoredPosition: {x: 0.0000053644, y: -77}
+  m_SizeDelta: {x: 732.2, y: 107.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1293017875
 MonoBehaviour:
@@ -3326,7 +3327,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 573410d5d652f4fb29097a3be81ab252, type: 3}
-    m_FontSize: 45
+    m_FontSize: 60
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -3334,10 +3335,10 @@ MonoBehaviour:
     m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 1
-    m_VerticalOverflow: 0
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Place the marker and press Start when you are done
+  m_Text: Touch to select the location of your treasure
 --- !u!222 &1293017876
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3462,15 +3463,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4780385889029814, guid: f9bd454b9f2b745f99adedc76229e139, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0.697
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4780385889029814, guid: f9bd454b9f2b745f99adedc76229e139, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0.041
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4780385889029814, guid: f9bd454b9f2b745f99adedc76229e139, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0.884
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4780385889029814, guid: f9bd454b9f2b745f99adedc76229e139, type: 2}
       propertyPath: m_LocalRotation.x
@@ -3491,6 +3492,10 @@ Prefab:
     - target: {fileID: 4780385889029814, guid: f9bd454b9f2b745f99adedc76229e139, type: 2}
       propertyPath: m_RootOrder
       value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1168849885877932, guid: f9bd454b9f2b745f99adedc76229e139, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f9bd454b9f2b745f99adedc76229e139, type: 2}
