@@ -7,7 +7,6 @@ using UnityEngine.UI;
 namespace UnityEngine.XR.iOS {
 	public class MarkerPanelController : MonoBehaviour {
 
-		private bool m_marker_placed = false;
 		public GameObject m_marker;
 		public Button m_startButton;
 

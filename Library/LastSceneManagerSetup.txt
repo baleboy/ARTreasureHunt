@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/MyAssets/TreasureHuntScene.unity
+- path: Assets/Scenes/TreasureHuntScene.unity
   isLoaded: 1
   isActive: 1
